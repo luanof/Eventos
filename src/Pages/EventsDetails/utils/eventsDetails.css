@@ -1,0 +1,87 @@
+.EventImgDefoc {
+  max-width: 100%;
+  width: 100%;
+  height: 40vw;
+  filter: blur(15px);
+}
+.containerImg {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+.EventImgRelative {
+  position: relative;
+}
+.EventImg {
+  position: absolute;
+  top: 0;
+  width: 70%;
+  max-width: 70%;
+  height: 42vw;
+  left: 15%;
+  box-shadow: 0px 10px 31px #272727cf;
+  border-radius: 10px;
+}
+.containerDetails {
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+
+.containerDay {
+  display: flex;
+  flex-direction: column;
+}
+.containerDay :first-child {
+  font-size: 16px;
+  font-weight: bold;
+  color: #585757;
+}
+.containerDay :last-child {
+  font-size: 14px;
+  color: #413f3f93;
+}
+.containerendereco {
+  display: flex;
+  gap: 1%;
+}
+.containerendereco :last-child p {
+  font-weight: bold;
+  color: rgba(31, 30, 30, 0.87);
+}
+#line {
+  margin-block: 2%;
+  border: 1px solid #8b8b8b4d;
+}
+.containerDescription :last-child {
+  font-size: 13px;
+  padding-top: 3%;
+  color: #272727cf;
+}
+.containerBtnComprar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.containerBtnComprar button {
+  margin: 5%;
+  padding-inline: 5%;
+  padding-block: 1%;
+  border: 0;
+  background-color: rgb(31, 201, 31);
+  font-size: 20px;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.containerBtnComprar button:hover {
+  transition: 1s;
+  transform: translateY(-15px);
+  background-color: rgb(9, 255, 9);
+}

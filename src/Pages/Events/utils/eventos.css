@@ -1,7 +1,9 @@
 .containerEvents {
   margin: 10%;
 }
-
+.title {
+  text-align: center;
+}
 .Events {
   display: flex;
   gap: 2%;

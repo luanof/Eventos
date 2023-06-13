@@ -1,11 +1,13 @@
 import { FC } from "react";
 import "./utils/eventsCard.css";
 import { EventsCardProps } from "./utils/eventsCardProps";
+import IonIcon from "@reacticons/ionicons";
+import { Link } from "react-router-dom";
 const EventsCard: FC<EventsCardProps> = (props) => {
-  const { day, detalhes, endereco, month, src, time } = props;
+  const { id, day, detalhes, endereco, month, src, time } = props;
 
   return (
-    <div className="containerEvent">
+    <Link to={`/Eventos/${id}`} className="containerEvent">
       <img className="imgEvent" src={src} alt="LeoPain" />
       <div>
         <div className="containerData">
@@ -16,10 +18,13 @@ const EventsCard: FC<EventsCardProps> = (props) => {
         <hr className="line" />
         <div className="containerEndereco">
           <p className="titleDetails">{detalhes}</p>
-          <p className="endereco">{endereco}</p>
+          <div className="endereco">
+            <IonIcon name="location-outline" />
+            <p>{endereco}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
