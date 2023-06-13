@@ -11,13 +11,17 @@
   width: 20vw;
   margin-top: 10%;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 2vw;
+  text-decoration: none;
 }
 .containerEvent:hover {
   transition: 0.7s;
-
   box-shadow: 0 40px 44px -10px rgba(0, 0, 0, 0.1),
     0 20px 52px -20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+.containerEvent:focus {
+  text-decoration: none;
 }
 .containerData {
   display: flex;
@@ -33,7 +37,7 @@
 .month {
   font-size: 1vw;
 }
-.icon{
+.icon {
   font-size: 1vw;
 }
 .date {
