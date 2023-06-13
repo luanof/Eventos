@@ -7,7 +7,7 @@ const Events: FC = () => {
  
   return (
     <div className="containerEvents">
-      <h1 className="title">Proximnos Eventos</h1>
+      <h1 className="title">Proximos Eventos</h1>
 
       <div className="Events">
         {Events.map((item) => (

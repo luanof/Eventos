@@ -19,7 +19,7 @@ const EventsCard: FC<EventsCardProps> = (props) => {
         <div className="containerEndereco">
           <p className="titleDetails">{detalhes}</p>
           <div className="endereco">
-            <IonIcon name="location-outline" />
+            <IonIcon name="location-outline"  className="icon"/>
             <p>{endereco}</p>
           </div>
         </div>
