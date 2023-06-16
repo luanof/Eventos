@@ -2,31 +2,30 @@ import { FC } from "react";
 import { useParams } from "react-router-dom";
 import IonIcon from "@reacticons/ionicons";
 import "./utils/eventsDetails.css";
+import useEvents from "../../hooks/useEvents";
 
-import useDetails from "./Hooks/useDetails";
-const EventsDetails: FC = () => {
+const EventssDetails: FC = () => {
   const { id } = useParams();
-  const { Event } = useDetails(id as string);
- 
+  const { getEvent } = useEvents(id as string);
 
   return (
     <section>
       <div className="containerImg">
         <div style={{ width: "100%", overflow: "hidden" }}>
-          <img className="EventImgDefoc" src={Event?.src} alt="" />
+          <img className="EventImgDefoc" src={getEvent?.src} alt="" />
         </div>
 
-        <img className="EventImg" src={Event?.src} alt="" />
+        <img className="EventImg" src={getEvent?.src} alt="" />
       </div>
       <div className="containerDetails">
-        <h1>{Event?.evento}</h1>
+        <h1>{getEvent?.evento}</h1>
         <div className="time">
           <div>
             <IonIcon name="time-outline" />
           </div>
           <div className="containerDay">
-            <p>{Event?.time}</p>
-            <p>{Event?.day}</p>
+            <p>{getEvent?.timeEvent}</p>
+            <p>{getEvent?.fullDay}</p>
           </div>
         </div>
         <div className="containerendereco">
@@ -34,13 +33,13 @@ const EventsDetails: FC = () => {
             <IonIcon name="location-outline" />
           </div>
           <div>
-            <p>{Event?.endereco}</p>
+            <p>{getEvent?.enderecoCompleto}</p>
           </div>
         </div>
         <hr id="line" />
         <div className="containerDescription">
           <p>DESCRIÇÃO DO EVENTO:</p>
-          <p>{Event?.descricao}</p>
+          <p>{getEvent?.descricao}</p>
         </div>
       </div>
       <div className="containerBtnComprar">
@@ -50,4 +49,4 @@ const EventsDetails: FC = () => {
   );
 };
 
-export default EventsDetails;
+export default EventssDetails;
