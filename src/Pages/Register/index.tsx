@@ -1,8 +1,8 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 import "./utils/register.css";
 const Register: FC = () => {
-  //   const [register, setRegister] = useState();
+
 
   return (
     <div className="login-page">
