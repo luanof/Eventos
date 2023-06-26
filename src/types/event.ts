@@ -11,4 +11,7 @@ export interface Event {
   timeEvent: string;
   descricao: string;
   enderecoCompleto: string;
+  status?: Status;
 }
+
+export type Status = "Iniciado" | "Pendente" | "Concluindo";

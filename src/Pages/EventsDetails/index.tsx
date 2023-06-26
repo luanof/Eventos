@@ -1,12 +1,18 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { useParams } from "react-router-dom";
 import IonIcon from "@reacticons/ionicons";
 import "./utils/eventsDetails.css";
 import useEvents from "../../hooks/useEvents";
+import EmitirIngressoModal from "./Components/EmitirIngressoModal";
 
 const EventssDetails: FC = () => {
   const { id } = useParams();
   const { getEvent } = useEvents(id as string);
+
+  const [show, setShow] = useState<boolean>(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <section>
@@ -42,9 +48,16 @@ const EventssDetails: FC = () => {
           <p>{getEvent?.descricao}</p>
         </div>
       </div>
-      <div className="containerBtnComprar">
-        <button>Comprar Ingresso</button>
+      <div
+        className="containerBtnComprar"
+        onClick={() => (getEvent?.status === "Concluindo" ? handleShow() : "")}
+      >
+        <button>
+          {getEvent?.status ? "Emitir Ingresso" : "Comprar Ingresso"}
+        </button>
       </div>
+
+      <EmitirIngressoModal show={show} handleClose={handleClose} />
     </section>
   );
 };

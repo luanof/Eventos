@@ -15,6 +15,7 @@ const useEvents = (id?: string) => {
       descricao: "LÉO PAIN - 12/06/23",
       enderecoCompleto:
         "Araújo Vianna - Parque Farroupilha, 685, Porto Alegre - Rio Grande do Sul",
+       
     },
     {
       id: 2,
@@ -31,6 +32,7 @@ const useEvents = (id?: string) => {
         "Fernandinho é um cantor gospel com mais de 20 anos de carreira e, recentemente, lançou seu mais novo trabalho, o Álbum Único.",
       enderecoCompleto:
         "Araújo Vianna - Parque Farroupilha, 685, Porto Alegre - Rio Grande do Sul",
+      status: "Concluindo"
     },
     {
       id: 3,

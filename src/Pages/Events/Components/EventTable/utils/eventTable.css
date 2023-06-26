@@ -1,0 +1,15 @@
+
+.container-table{
+    padding-bottom: 5%;
+  }
+  .Sumario thead tr th {
+    text-align: center;
+    background-color: #5b9bd5;
+    color: #ffffff;
+    padding-block: 2%;
+  }
+  
+  
+  .Sumario tbody tr td{
+    background-color: rgb(234 239 247);
+  }
