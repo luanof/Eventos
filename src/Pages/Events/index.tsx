@@ -2,7 +2,7 @@ import { FC } from "react";
 import "./utils/eventos.css";
 import EventsCard from "./Components/EventsCard";
 import useEvents from "../../hooks/useEvents";
-import EventTable from "./Components/EventTable/EventTable";
+
 const Events: FC = () => {
   const { events } = useEvents();
 
@@ -15,9 +15,9 @@ const Events: FC = () => {
           <EventsCard {...item} key={item.id} />
         ))}
       </div>
-      <div className="container-table">
+      {/* <div className="container-table">
         <EventTable />
-      </div>
+      </div> */}
     </div>
   );
 };
